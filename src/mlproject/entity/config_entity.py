@@ -17,9 +17,8 @@ class DataIngestionConfig:        # written type : told my method to  return the
 
 
 
-
 @dataclass(frozen = True)
-class DataValidationConfig:
+class DatavalidationConfig:
     root_dir: Path
     STATUS_FILE: str
     unzip_data_dir: Path

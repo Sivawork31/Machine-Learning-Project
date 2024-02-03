@@ -1,6 +1,7 @@
 from mlproject.constants import *
 from mlproject.utils.common import read_yaml, Create_directories
-from  mlproject.entity.config_entity import DataIngestionConfig, DataValidationConfig
+from  mlproject.entity.config_entity import (DataIngestionConfig, 
+                                             DatavalidationConfig)
 
 #Configuration manager  message
 
@@ -41,7 +42,7 @@ class ConfigurationManager:
 
 
 
-    def get_data_validation_config(self) -> DataValidationConfig:
+    def get_data_validation_config(self) -> DatavalidationConfig:
         config = self.config.data_validation
         schema = self.schema.COLUMNS
 
@@ -50,7 +51,7 @@ class ConfigurationManager:
         
 
         
-        data_validation_config = DataValidationConfig(
+        data_validation_config = DatavalidationConfig(
             root_dir= config.root_dir,
             STATUS_FILE = config.STATUS_FILE,
             unzip_data_dir = config.unzip_data_dir,
