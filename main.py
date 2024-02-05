@@ -5,6 +5,13 @@ from src.mlproject.pipeline.stage_01_data_ingestion import DataIngestionTraining
 from mlproject.pipeline.stage_02_data_validation import DatavalidationTrainingPipeline
 
 
+from mlproject.pipeline.stage_03_data_transformation import DataTransformationTrainingPipeline
+
+from mlproject.pipeline.stage_04_model_trainer import ModelTrainerTrainingPipeline
+
+
+
+
 STAGE_NAME = "Data Ingestion Stage"
 
 try:
@@ -16,8 +23,6 @@ try:
 except Exception as e:
         logger.exception(e)
         raise e
-
-
 
 
 
@@ -37,3 +42,38 @@ except Exception as e:
         raise e
 
 
+
+
+
+
+
+
+STAGE_NAME = "Data Transformation Stage"
+
+try:
+    logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<")
+    data_ingestion = DataTransformationTrainingPipeline()
+    data_ingestion.main()
+    logger.info(f">>>>>> stage {STAGE_NAME} completed<<<<<<< \n\n x==========x")
+
+
+except Exception as e:
+        logger.exception(e)
+        raise e
+
+
+
+
+
+STAGE_NAME = "Model Trainer Stage"
+
+try:
+        logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<")
+        obj = ModelTrainerTrainingPipeline()
+        obj.main()
+        logger.info(f">>>>>> stage {STAGE_NAME} completed<<<<<<< \n\n x==========x")
+    
+
+except Exception as e:
+        logger.exception(e)
+        raise e
