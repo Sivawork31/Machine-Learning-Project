@@ -10,7 +10,7 @@ from mlproject.pipeline.stage_03_data_transformation import DataTransformationTr
 from mlproject.pipeline.stage_04_model_trainer import ModelTrainerTrainingPipeline
 
 
-
+# Data ingestion stage :
 
 STAGE_NAME = "Data Ingestion Stage"
 
@@ -25,7 +25,7 @@ except Exception as e:
         raise e
 
 
-
+# Data validation stage:
 
 
 
@@ -44,7 +44,7 @@ except Exception as e:
 
 
 
-
+#Data Transformation:
 
 
 
@@ -62,7 +62,7 @@ except Exception as e:
         raise e
 
 
-
+# Model Training:
 
 
 STAGE_NAME = "Model Trainer Stage"
