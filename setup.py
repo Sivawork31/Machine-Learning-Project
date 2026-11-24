@@ -28,5 +28,4 @@ setuptools.setup(
 package_dir = {"":"src"},
 packages = setuptools.find_namespace_packages(where="src")
 
-
 )
